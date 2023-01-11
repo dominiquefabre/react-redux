@@ -1,20 +1,6 @@
 import React from 'react'
 
-// const Content = ({ children }) => (
-//   <>
-//     <p>{ children }</p>
-//     <button 
-//       onClick={e => {
-//         e.preventDefault()
-//         alert('clicked !')
-//       }}
-//     >
-//       Click
-//     </button>
-//   </>
-// )
-
-const Content = ({ children }) => {
+const Content = ({ children, handleHover }) => {
 
   const handleClick = e => {
     e.preventDefault()
@@ -22,14 +8,17 @@ const Content = ({ children }) => {
   }
 
   return (
-    <>
+    <div
+      onMouseEnter={() => handleHover()}
+      onMouseLeave={() => handleHover(false)}
+    >
       <p>{ children }</p>
       <button 
         onClick={handleClick}
       >
         Click
       </button>
-    </>
+    </div>
   )
 }
 

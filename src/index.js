@@ -1,8 +1,15 @@
 import ReactDOM from 'react-dom/client'
 import React from 'react'
 
-import App from './App'
+import Form from './Form'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import formDefinition from './formDefinition'
 
 const root = ReactDOM.createRoot(document.getElementById('app-root'))
 
-root.render(React.createElement(App))
+root.render(
+  <Provider store={store}>
+    <Form formDefinition={formDefinition}/>
+  </Provider>
+)

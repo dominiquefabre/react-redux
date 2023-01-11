@@ -1,9 +1,5 @@
 import React from 'react'
 
-const Content = ({children }) => React.createElement(
-  'p',
-  {},
-  children
-)
+const Content = ({ children }) => <p>{ children }</p>
 
 export default Content

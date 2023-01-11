@@ -1,18 +1,15 @@
 import React from 'react'
 
-function App(props) {
-  
-  return React.createElement(
-    'div',
-    { id: props.id },
-    props.children
-  )
-}
+import Title from './Title'
+import Content from './Content'
 
-// const App = ({ id, children }) => React.createElement(
-//   'div',
-//   { id },
-//   children
-// )
+const App = () => React.createElement(
+  'div',
+  {},
+  [
+    React.createElement(Title, { id: 'app-title' }, 'My nice App'),
+    React.createElement(Content, {}, 'Vivamus suscipit tortor eget felis porttitor volutpat.')
+  ]
+)
 
 export default App

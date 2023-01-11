@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Title = ({ id, level: Tag, content, visible = false }) => visible && (
-  <Tag id={id}>
+const Title = ({ id, level: Level, content, visible = false }) => visible && (
+  <Level id={id}>
     { content }
-  </Tag>
+  </Level>
 )
 
 export default Title

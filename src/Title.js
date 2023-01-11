@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Title = ({ id, children }) => React.createElement(
-  'h1',
+const Title = ({ id, level, content, visible = false }) => visible ? React.createElement(
+  level,
   { id },
-  children
-)
+  content
+) : null
 
 export default Title

@@ -7,7 +7,7 @@ const App = () => React.createElement(
   'div',
   {},
   [
-    React.createElement(Title, { id: 'app-title' }, 'My nice App'),
+    React.createElement(Title, { id: 'app-title', level: 'h2', content: 'My nice App', visible: true }),
     React.createElement(Content, {}, 'Vivamus suscipit tortor eget felis porttitor volutpat.')
   ]
 )
